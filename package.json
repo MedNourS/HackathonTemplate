@@ -1,0 +1,19 @@
+{
+  "name": "hackathontemplate",
+  "version": "1.0.0",
+  "description": "A Hackathon Template using Vite React (TS) with TailwindCSS and shadcn components for the frontend, and Express for the backend.",
+  "license": "MIT",
+  "author": "MedNourS",
+  "type": "module",
+  "scripts": {
+    "dev:all": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && node index.js",
+    "install:all": "concurrently \"npm install\" \"npm run install:frontend\" \"npm run install:backend\"",
+    "install:frontend": "cd frontend && npm install",
+    "install:backend": "cd backend && npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

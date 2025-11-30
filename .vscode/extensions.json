@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "csstools.postcss",
+        "bradlc.vscode-tailwindcss",
+        "rangav.vscode-thunder-client",
+        "oderwat.indent-rainbow",
+        "aaron-bond.better-comments"
+    ]
+}
