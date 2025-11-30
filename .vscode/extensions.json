@@ -5,6 +5,8 @@
         "rangav.vscode-thunder-client",
         "oderwat.indent-rainbow",
         "aaron-bond.better-comments",
-        "christian-kohler.npm-intellisense"
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "formulahendry.auto-rename-tag"
     ]
 }
