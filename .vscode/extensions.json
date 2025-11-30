@@ -4,6 +4,7 @@
         "bradlc.vscode-tailwindcss",
         "rangav.vscode-thunder-client",
         "oderwat.indent-rainbow",
-        "aaron-bond.better-comments"
+        "aaron-bond.better-comments",
+        "christian-kohler.npm-intellisense"
     ]
 }
