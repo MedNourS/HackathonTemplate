@@ -1,17 +1,31 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
-import Boilerplate from './pages/Boilerplate'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import LandingPage from './pages/LandingPage';
+import HomePage from './pages/HomePage'
+import LoginPage from './pages/LoginPage';
 import NotFoundPage from './pages/NotFoundPage'
 
 function App() {
+  let isSignedIn = true;
 
   return (
     <>
       <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Boilerplate />} />
-            <Route path="*" element={<NotFoundPage />} />
-          </Routes>
+          {(isSignedIn)
+            ?
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<Navigate to="/" replace />} />
+              <Route path="/NotFound" element={<NotFoundPage />} />
+              <Route path="*" element={<Navigate to="/NotFound" replace />} />
+            </Routes>
+            : 
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/NotFound" element={<NotFoundPage />} />
+              <Route path="*" element={<Navigate to="/NotFound" replace />} />
+            </Routes>
+          }
         </BrowserRouter>
     </>
   )
